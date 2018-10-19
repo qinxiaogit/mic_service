@@ -15,6 +15,7 @@ return [
     'bootScan'     => [
         'App\Commands',
         'App\Boot',
+        'App\WebSocket'
     ],
     'excludeScan'  => [
 
@@ -27,4 +28,9 @@ return [
     'service'      => require __DIR__ . DS . 'service.php',
     'breaker'      => require __DIR__ . DS . 'breaker.php',
     'provider'     => require __DIR__ . DS . 'provider.php',
+    'devtool'      =>[
+        'enable'=>true,
+        'logEventToConsole'=>true,
+        'logHttpRequestToConsole'=>true
+    ]
 ];

@@ -11,8 +11,8 @@ return [
     'master' => [
         'name'        => 'master',
         'uri'         => [
-            '127.0.0.1:3306/test?user=root&password=123456&charset=utf8',
-            '127.0.0.1:3306/test?user=root&password=123456&charset=utf8',
+            '172.18.10.142:3306/miao?user=root&password=miao&charset=utf8',
+            '172.18.10.142:3306/miao?user=root&password=miao&charset=utf8',
         ],
         'minActive'   => 8,
         'maxActive'   => 8,
@@ -25,8 +25,8 @@ return [
     'slave' => [
         'name'        => 'slave',
         'uri'         => [
-            '127.0.0.1:3306/test?user=root&password=123456&charset=utf8',
-            '127.0.0.1:3306/test?user=root&password=123456&charset=utf8',
+            '172.18.10.142:3306/miao?user=root&password=miao&charset=utf8',
+            '172.18.10.142:3306/miao?user=root&password=miao&charset=utf8',
         ],
         'minActive'   => 8,
         'maxActive'   => 8,

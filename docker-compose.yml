@@ -4,9 +4,11 @@ services:
         container_name: swoft
         image: swoft/swoft
         ports:
-            - "8888:80"
+            - "81:80"
+            - "8099:8099"
         volumes:
             - ./:/var/www/swoft
         stdin_open: true
         tty: true
-        command: php /var/www/swoft/bin/swoft start
+        entrypoint: php /var/www/swoft/bin/swoft ws:start
+#        command: php /var/www/swoft/bin/swoft ws:start

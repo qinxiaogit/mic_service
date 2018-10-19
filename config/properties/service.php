@@ -23,5 +23,13 @@ return [
         'useProvider' => false,
         'balancer' => 'random',
         'provider' => 'consul',
+    ],
+    'miao'=>[
+        'name'=>'miao',
+        'uri'=>[
+            '127.0.0.1:9099',
+            '127.0.0.1:9099',
+            '127.0.0.1:9099',
+        ]
     ]
 ];

@@ -11,13 +11,15 @@ return [
     'serverDispatcher' => [
         'middlewares' => [
             \Swoft\View\Middleware\ViewMiddleware::class,
-            // \Swoft\Devtool\Middleware\DevToolMiddleware::class,
-            // \Swoft\Session\Middleware\SessionMiddleware::class,
+             \Swoft\Devtool\Middleware\DevToolMiddleware::class,
+             \Swoft\Session\Middleware\SessionMiddleware::class,
+             App\Middlewares\ActionTestMiddleware::class,
+            App\Middlewares\MiaoMidedleware::class
         ]
     ],
     'httpRouter'       => [
-        'ignoreLastSlash'  => false,
-        'tmpCacheNumber' => 1000,
+        'ignoreLastSlash'  => true,
+        'tmpCacheNumber' => 0,
         'matchAll'       => '',
     ],
     'requestParser'    => [
@@ -34,5 +36,5 @@ return [
     'demoRedis' => [
         'class' => \Swoft\Redis\Redis::class,
         'poolName' => 'demoRedis'
-    ]
+    ],
 ];

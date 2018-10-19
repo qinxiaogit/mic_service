@@ -26,7 +26,7 @@ class RestController
      * 查询列表接口
      * 地址:/api/user/.
      *
-     * @RequestMapping(route="/api/user", method={RequestMethod::GET})
+     * @RequestMapping(route="/api/user", method={RequestMethod::POST})
      */
     public function list()
     {
