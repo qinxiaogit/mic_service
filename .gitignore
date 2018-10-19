@@ -11,4 +11,5 @@ temp/
 .env
 .DS_Store
 public/devtool/
-vendor/
+/vendor
+composer.phar
