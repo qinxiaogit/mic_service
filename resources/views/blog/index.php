@@ -6,7 +6,7 @@
                     <small>【<?=$link["type"]?>】</small>
                 </div>
                 <div class="" >
-                    <a href="<?= $link['href'] ?>" style="text-decoration: none;color: #000;:visited:#fff;"><small><?= $link['title'] ?></small></a>
+                    <a href="<?= $link['url'] ?>" style="text-decoration: none;color: #000;:visited:#fff;"><small><?= $link['title'] ?></small></a>
                 </div>
             </div>
         </li>

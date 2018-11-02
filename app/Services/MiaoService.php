@@ -36,7 +36,6 @@ class MiaoService implements MiaoInterface
      */
     public function getMiao(string $id)
     {
-
         return ["id"=>$id,"name"=>self::class];//self::class];
     }
 
@@ -47,11 +46,11 @@ class MiaoService implements MiaoInterface
      * @return array
      */
     public function addMiao(string $name,string $phone,string $head){
-        $i = 0;
+        $i = 1;
         $reRe = [];
 //        for ($i=0;$i<100;$i++){
             $user = new Users();
-            $user->setName($i.random_bytes($i));
+            $user->setName($name);
             $user->setPhone($phone);
             $user->setHeadUrl($head);
             $user->save();

@@ -37,7 +37,7 @@ class MiaoRpcController
      * @RequestMapping(route="create",method=RequestMethod::GET)
      */
     public function create(){
-        $ret = $this->miaoService->addMiao("小明","18227755589","http://www.baidu.com");
+        $ret = $this->miaoService->addMiao("小明2","18227755589","http://www.baidu.com");
         return ["hello","nihao",$ret];
     }
 }

@@ -61,10 +61,6 @@ class IndexController
     public function index(Request $request){
         $layoutFile = 'layouts/master.php';
         $list = $this->pageLogic->getList("active");
-//        $list = [
-//            ["title"=>"测试文章","type"=>"php","url"=>"/blog/1"],
-//            ["title"=>"测试文章","type"=>"go","url"=>"/blog/2"],
-//        ];
         return compact("layoutFile","list");
     }
 

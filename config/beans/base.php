@@ -37,4 +37,18 @@ return [
         'class' => \Swoft\Redis\Redis::class,
         'poolName' => 'demoRedis'
     ],
+    'providerSelector' => [
+        'class' => \Swoft\Sg\ProviderSelector::class,
+        'provider' => 'consul',
+        'providers' => [
+            'consul' => \Swoft\Sg\Provider\ConsulProvider::class
+        ],
+    ],
+    'balancerSelector' => [
+        'class' => \Swoft\Sg\BalancerSelector::class,
+        'balancer' => 'random',
+        'balancers' => [
+            'random' => \Swoft\Sg\Balancer\RandomBalancer::class
+        ]
+    ],
 ];
