@@ -133,19 +133,6 @@ services:
             - TZ=Asia/Shanghai
             - HTTP_USER=owlet
             - HTTP_PASS=miao
-    kong-dashboard:
-        image: pgbi/kong-dashboard
-        ports:
-          - 8080:8080
-        volumes:
-          - .:/app:cached
-          - /app/node_modules/
-        depends_on:
-          kong:
-            condition: service_healthy
-        entrypoint: ./docker/entrypoint_dev.sh
-        volumes:
-            - ./docker-file/DNS/dnsmasq.conf:/etc/dnsmasq.conf
 volumes:
       portainer_data:
       postgresql_data:

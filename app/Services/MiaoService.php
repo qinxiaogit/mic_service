@@ -9,8 +9,11 @@
 namespace App\Services;
 
 use App\Lib\MiaoInterface;
+use App\Models\Logic\PageLogic;
+use Swoft\App;
 use Swoft\Bean\Annotation\Enum;
 use Swoft\Bean\Annotation\Floats;
+use Swoft\Bean\Annotation\Inject;
 use Swoft\Bean\Annotation\Number;
 use Swoft\Bean\Annotation\Strings;
 use Swoft\Rpc\Server\Bean\Annotation\Service;
@@ -59,6 +62,15 @@ class MiaoService implements MiaoInterface
 //        }
 //        print_r($reRe);die();
         return ["id"=>$name,"name"=>[1,2,3,4,5]];
+    }
+    /**
+     * @Inject()
+     * @var PageLogic
+     */
+    private $pageLogic;
+    public function pages(string $status = "ACTIVE"){
+//        $res = App::getLogger()->info(base64_encode($this->pageLogic->getList($status)));
+        return $this->pageLogic->getList($status);
     }
 
 }

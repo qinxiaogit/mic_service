@@ -26,4 +26,11 @@ interface MiaoInterface
      * @return mixed
      */
     public function addMiao(string $name,string $phone,string $head);
+
+    /**
+     * @method ResultInterface defPage(string $status="ACTIVE")
+     * @param string $status
+     * @return mixed
+     */
+    public function pages(string $status="ACTIVE");
 }

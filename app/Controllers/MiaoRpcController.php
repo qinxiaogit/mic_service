@@ -9,6 +9,7 @@
 namespace App\Controllers;
 
 use App\Lib\MiaoInterface;
+use Swoft\App;
 use Swoft\Bean\Annotation\Inject;
 use Swoft\Http\Server\Bean\Annotation\Controller;
 use Swoft\Http\Server\Bean\Annotation\RequestMapping;
@@ -39,5 +40,19 @@ class MiaoRpcController
     public function create(){
         $ret = $this->miaoService->addMiao("小明2","18227755589","http://www.baidu.com");
         return ["hello","nihao",$ret];
+    }
+    /**
+     * @RequestMapping(route="bean",method=RequestMethod::GET)
+     */
+    public function bean(){
+        return json_encode(App::getBean("UserLogic"));
+    }
+
+    /**
+     * @RequestMapping(route="pages",method=RequestMethod::GET)
+     * @return mixed
+     */
+    public function pages(){
+        return $this->miaoService->pages();
     }
 }

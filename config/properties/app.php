@@ -15,10 +15,11 @@ return [
     'bootScan'     => [
         'App\Commands',
         'App\Boot',
-        'App\WebSocket'
+        'App\WebSocket',
+        'App\Exception',
     ],
     'excludeScan'  => [
-
+        'App\Exception',
     ],
     'I18n'         => [
         'sourceLanguage' => '@root/resources/messages/',
