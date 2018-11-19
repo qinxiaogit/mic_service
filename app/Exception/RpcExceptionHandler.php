@@ -41,4 +41,21 @@ class RpcExceptionHandler
         App::error(json_encode($data));
         return $response->json($data);
     }
+    /**
+     * @Handler(RpcStatusException::class)
+     * @param Response $response
+     * @param \Throwable $throwable
+     * @return Response
+     * 
+     */
+    public function handlerStatus(Response $response , \Throwable $throwable){
+        $file      = $throwable->getFile();
+        $line      = $throwable->getLine();
+        $code      = $throwable->getCode();
+        $exception = $throwable->getMessage();
+
+        $data = ['msg' => $exception, 'file' => $file, 'line' => $line, 'code' => $code];
+        App::error(json_encode($data));
+        return $response->json($data); 
+    }
 }

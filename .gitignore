@@ -13,3 +13,4 @@ temp/
 public/devtool/
 /vendor
 composer.phar
+.phpstorm.meta.php

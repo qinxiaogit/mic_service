@@ -9,7 +9,7 @@
 
 return [
     'consul' => [
-        'address' => '',
+        'address' => 'localhost',
         'port'    => 8500,
         'register' => [
             'id'                => '',
