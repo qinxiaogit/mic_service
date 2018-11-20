@@ -54,8 +54,7 @@ class TestAop
         $result = $joinPoint->getReturn();
 //        App::info("text".json_encode($result),$result);
 //        $result["aop"] = "afterReturn";
-//        return  $result;
-        return null;
+        return  $result;
     }
 
 //    /**
