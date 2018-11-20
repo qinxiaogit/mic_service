@@ -14,3 +14,5 @@ public/devtool/
 /vendor
 composer.phar
 .phpstorm.meta.php
+docker-file/DNS/dnsmasq.conf
+.editorconfig
