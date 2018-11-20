@@ -52,9 +52,10 @@ class TestAop
      */
     public function afterReturn(JoinPoint $joinPoint){
         $result = $joinPoint->getReturn();
-//        App::error("text".json_encode($result),$result);
-        $result["aop"] = "afterReturn";
-        return  $result;
+//        App::info("text".json_encode($result),$result);
+//        $result["aop"] = "afterReturn";
+//        return  $result;
+        return null;
     }
 
 //    /**

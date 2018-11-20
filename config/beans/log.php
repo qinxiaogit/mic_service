@@ -24,7 +24,7 @@ return [
         'formatter' => '${lineFormatter}',
         'levels'    => [
             \Swoft\Log\Logger::ERROR,
-            \Swoft\Log\Logger::WARNING,
+            \Swoft\Log\Logger::WARNING
         ],
     ],
     'logger' => [
@@ -35,6 +35,15 @@ return [
         'handlers'      => [
             '${noticeHandler}',
             '${applicationHandler}',
+            '${infoHandle}'
         ],
     ],
+    'infoHandle'=>[
+        'class'     => \Swoft\Log\FileHandler::class,
+        'logFile'   => '@runtime/logs/'.date("Y-m-d").'/info.log',
+        'formatter' => '${lineFormatter}',
+        'levels'    => [
+            \Swoft\Log\Logger::INFO,
+        ]
+    ]
 ];

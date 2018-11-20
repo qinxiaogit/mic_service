@@ -38,7 +38,7 @@ class RpcExceptionHandler
         $exception = $throwable->getMessage();
 
         $data = ['msg' => $exception, 'file' => $file, 'line' => $line, 'code' => $code];
-        App::error(json_encode($data));
+        App::info("handlerException：".json_encode($data));
         return $response->json($data);
     }
     /**
@@ -55,7 +55,7 @@ class RpcExceptionHandler
         $exception = $throwable->getMessage();
 
         $data = ['msg' => $exception, 'file' => $file, 'line' => $line, 'code' => $code];
-        App::error(json_encode($data));
+        App::info("handlerStatus：".json_encode($data));
         return $response->json($data); 
     }
 }
