@@ -33,5 +33,11 @@ return [
         'enable'=>true,
         'logEventToConsole'=>true,
         'logHttpRequestToConsole'=>true
+    ],
+    'auth'=>[
+        'jwt'=>[
+            'algorithm' => 'HS256',
+            'secret' => 'xiaosichuan'
+        ]
     ]
 ];

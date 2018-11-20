@@ -23,11 +23,26 @@ use Swoft\Bean\Annotation\Bean;
  */
 class UserDao
 {
+    /**
+     * @return array
+     */
     public function getUserInfo()
     {
         return [
             'uid' => 666,
             'name' => 'stelin'
+        ];
+    }
+
+    /**
+     * @param string $username
+     * @return array
+     */
+    public function getUserByUsername(string $username){
+        return [
+            "a"=>"xiaoming",
+            'password'=>11222,
+            'username'=>$username
         ];
     }
 }

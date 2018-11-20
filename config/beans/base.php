@@ -14,7 +14,9 @@ return [
              \Swoft\Devtool\Middleware\DevToolMiddleware::class,
              \Swoft\Session\Middleware\SessionMiddleware::class,
               App\Middlewares\ActionTestMiddleware::class,
-             App\Middlewares\MiaoMidedleware::class
+              App\Middlewares\MiaoMidedleware::class,
+             \Swoft\Auth\Middleware\AuthMiddleware::class
+
         ]
     ],
     'httpRouter'       => [
@@ -51,4 +53,8 @@ return [
             'random' => \Swoft\Sg\Balancer\RandomBalancer::class
         ]
     ],
+    \Swoft\Auth\Mapping\AuthManagerInterface::class => [
+        'class'=>App\Services\AuthManagerService::class
+    ],
+
 ];
