@@ -110,6 +110,7 @@ class TestCommand
     public function task()
     {
         $result = Task::deliver('sync', 'console', ['console']);
-        var_dump($result);
+        $result1= Task::deliver("timer","coroutineJob",["hello","world"]);
+        var_dump($result,$result1);
     }
 }
